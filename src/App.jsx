@@ -22,4 +22,19 @@ export default function App() {
         </h1>
       </div>
     );
+
+  return (
+    <main className="min-h-screen bg-white">
+        {/* TEXT (text-[#ffcb05])*/}
+        <h1
+          className={
+            active
+              ? `hero-text opacity-0 absolute bottom-14 left-10 text-6xl text-black font-outline-2 transition-all duration-300`
+              : `hero-text opacity-100 absolute bottom-14 left-10 text-6xl text-black font-outline-2 transition-all duration-300`
+          }
+        >
+          Generation 1
+        </h1>
+    </main>
+  );
 }
