@@ -32,6 +32,63 @@ function PokeThreeJs({ active, setActive }) {
   }, [active]);
   return (
     <>
+      <ambientLight intensity={0.1} />
+      <Environment preset="sunset" />
+      <CameraControls
+        ref={controlsRef}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 5}
+      />
+
+      <PokeStage
+        texture={"/world3d/forest.jpg"}
+        name="Bulbasaur"
+        color={"#8acabf"}
+        active={active}
+        setActive={setActive}
+        hovered={hovered}
+        setHovered={setHovered}
+      >
+        <Bulbasaur2
+          scale={3}
+          position-y={-0.7}
+          hovered={hovered === "bulbasaur"}
+        />
+      </PokeStage>
+      <PokeStage
+        name="Charmander"
+        color="#e9424e"
+        texture={"/world3d/desert.jpg"}
+        position-x={-3}
+        rotation-y={Math.PI / 5}
+        active={active}
+        setActive={setActive}
+        hovered={hovered}
+        setHovered={setHovered}
+      >
+        <Charmander2
+          scale={3}
+          position-y={-0.7}
+          hovered={hovered === "charmander"}
+        />
+      </PokeStage>
+      <PokeStage
+        name="Squirtle"
+        color="#79afd4"
+        texture={"/world3d/beach.jpg"}
+        position-x={3}
+        rotation-y={-Math.PI / 5}
+        active={active}
+        setActive={setActive}
+        hovered={hovered}
+        setHovered={setHovered}
+      >
+        <Squirtle2
+          scale={3}
+          position-y={-0.7}
+          hovered={hovered === "squirtle"}
+        />
+      </PokeStage>
     </>
   );
 }
