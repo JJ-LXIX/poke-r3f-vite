@@ -35,6 +35,21 @@ export default function App() {
         >
           Generation 1
         </h1>
+        <div
+          className={
+            active
+              ? `opacity-0 absolute top-10 right-10 h-[10rem] w-[45rem]`
+              : `opacity-100 absolute top-10 right-10 h-[10rem] w-[45rem]`
+          }
+        >
+          <img
+            src={speechBubble}
+            fill
+            alt="double click on the pokemon cards"
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+      </div>
     </main>
   );
 }
