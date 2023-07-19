@@ -24,7 +24,7 @@ export default function App() {
     );
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-black">
       <div className="h-[100vh] w-full">
         <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
           <Suspense fallback={<Loader />}>
