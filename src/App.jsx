@@ -25,6 +25,14 @@ export default function App() {
 
   return (
     <main className="min-h-screen bg-white">
+      <div className="h-[100vh] w-full">
+        <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
+          <Suspense fallback={<Loader />}>
+            <color attach="background" args={["#000"]} />
+            <PokeThreeJsCard active={active} setActive={setActive} />
+          </Suspense>
+        </Canvas>
+
         {/* TEXT (text-[#ffcb05])*/}
         <h1
           className={
@@ -35,6 +43,7 @@ export default function App() {
         >
           Generation 1
         </h1>
+
         <div
           className={
             active
