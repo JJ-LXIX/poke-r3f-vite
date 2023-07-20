@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function Charmander2(props) {
-  const { nodes, materials } = useGLTF("/models/charmander2.gltf");
+  const { nodes, materials } = useGLTF("/models/charmanderFinal.glb");
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -64,4 +64,4 @@ export default function Charmander2(props) {
   );
 }
 
-useGLTF.preload("/models/charmander2.gltf");
+useGLTF.preload("/models/charmanderFinal.glb");

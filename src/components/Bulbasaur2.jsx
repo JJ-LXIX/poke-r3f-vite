@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export default function Bulbasaur2(props) {
-  const { nodes, materials } = useGLTF("/models/bulbasaur2.gltf");
+  const { nodes, materials } = useGLTF("/models/bulbaFinal.glb");
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -56,4 +56,4 @@ export default function Bulbasaur2(props) {
   );
 }
 
-useGLTF.preload("/models/bulbasaur2.gltf");
+useGLTF.preload("/models/bulbaFinal.glb");
