@@ -26,8 +26,10 @@ function PokeThreeJs({ active, setActive }) {
         targetPosition.z,
         true
       );
+      controlsRef.current.maxDistance = 5;
     } else {
       controlsRef.current.setLookAt(0, 0, 10, 0, 0, 0, true);
+      controlsRef.current.maxDistance = 20;
     }
   }, [active]);
   return (
@@ -35,6 +37,8 @@ function PokeThreeJs({ active, setActive }) {
       <ambientLight intensity={0.1} />
       <Environment preset="sunset" />
       <CameraControls
+        minDistance={0.01}
+        maxDistance={20}
         ref={controlsRef}
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 5}
