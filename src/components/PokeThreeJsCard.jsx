@@ -41,7 +41,7 @@ function PokeThreeJs({ active, setActive }) {
       />
 
       <PokeStage
-        texture={"/world3d/forest.jpg"}
+        texture={"/world/forest.jpg"}
         name="Bulbasaur"
         color={"#8acabf"}
         active={active}
@@ -58,7 +58,7 @@ function PokeThreeJs({ active, setActive }) {
       <PokeStage
         name="Charmander"
         color="#e9424e"
-        texture={"/world3d/desert.jpg"}
+        texture={"/world/desert.jpg"}
         position-x={-3}
         rotation-y={Math.PI / 5}
         active={active}
@@ -75,7 +75,7 @@ function PokeThreeJs({ active, setActive }) {
       <PokeStage
         name="Squirtle"
         color="#79afd4"
-        texture={"/world3d/beach.jpg"}
+        texture={"/world/beach.jpg"}
         position-x={3}
         rotation-y={-Math.PI / 5}
         active={active}
